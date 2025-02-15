@@ -5,7 +5,29 @@ import AddTaskPopup from "../components/Task";
 
 export default function Home() {
   const [isPopupVisible, setPopupVisible] = useState(false);
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([
+    {
+      id: "1",
+      taskTitle: "Study maths",
+      taskDescription: "i have to make this done as fast as possible",
+      taskStatus: "in progress",
+      taskIconLeft: "📚",
+    },
+    {
+      id: "2",
+      taskTitle: "Cook food",
+      taskDescription: "i have to make this done",
+      taskStatus: "done",
+      taskIconLeft: "👩‍🍳",
+    },
+    {
+      id: "3",
+      taskTitle: "Clean my room",
+      taskDescription: "i have to make this done",
+      taskStatus: "won't do",
+      taskIconLeft: "🧹",
+    },
+  ]);
   const [selectedTask, setSelectedTask] = useState(null);
 
   useEffect(() => {
